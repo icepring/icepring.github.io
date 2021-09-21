@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="需求整理,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="ts+ 2.3.0 版本后续工作甲方 需求整理 H5需求   分享下载单页，需要设计图   PC需求   pc端添加表情，之前移动端做了表情，所以是有表情json数据的 管理员功能扩展，之前ts+有，但是类型不足，需要新增可删除 问题、回答、资讯功能   服务端需求   管理员功能扩展，之前ts+有，但是类型不足，需要新增可删除 问题、回答、资讯功能 问题、回答、资讯提供管理员删除接口 优化建议">
+<meta name="keywords" content="需求整理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ts+ 2.3.0 版本后续工作">
+<meta property="og:url" content="https://icepring.github.io/2019/03/12/ts+ 2.3.0 版本后续工作/index.html">
+<meta property="og:site_name" content="不二">
+<meta property="og:description" content="ts+ 2.3.0 版本后续工作甲方 需求整理 H5需求   分享下载单页，需要设计图   PC需求   pc端添加表情，之前移动端做了表情，所以是有表情json数据的 管理员功能扩展，之前ts+有，但是类型不足，需要新增可删除 问题、回答、资讯功能   服务端需求   管理员功能扩展，之前ts+有，但是类型不足，需要新增可删除 问题、回答、资讯功能 问题、回答、资讯提供管理员删除接口 优化建议">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://user-images.githubusercontent.com/11835710/54098603-44620f80-43f0-11e9-814d-d78b5a323822.png">
+<meta property="og:updated_time" content="2019-03-12T11:54:24.134Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ts+ 2.3.0 版本后续工作">
+<meta name="twitter:description" content="ts+ 2.3.0 版本后续工作甲方 需求整理 H5需求   分享下载单页，需要设计图   PC需求   pc端添加表情，之前移动端做了表情，所以是有表情json数据的 管理员功能扩展，之前ts+有，但是类型不足，需要新增可删除 问题、回答、资讯功能   服务端需求   管理员功能扩展，之前ts+有，但是类型不足，需要新增可删除 问题、回答、资讯功能 问题、回答、资讯提供管理员删除接口 优化建议">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/11835710/54098603-44620f80-43f0-11e9-814d-d78b5a323822.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://icepring.github.io/2019/03/12/ts+ 2.3.0 版本后续工作/">
+
+
+
+
+
+  <title>ts+ 2.3.0 版本后续工作 | 不二</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">不二</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">唱最嗨的歌，做最咸的鱼</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://icepring.github.io/2019/03/12/ts+ 2.3.0 版本后续工作/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="TangYuanMao">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="不二">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">ts+ 2.3.0 版本后续工作</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-12T11:56:33+09:00">
+                2019-03-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="ts-2-3-0-版本后续工作"><a href="#ts-2-3-0-版本后续工作" class="headerlink" title="ts+ 2.3.0 版本后续工作"></a>ts+ 2.3.0 版本后续工作</h1><h2 id="甲方"><a href="#甲方" class="headerlink" title="甲方"></a>甲方</h2><p><img src="https://user-images.githubusercontent.com/11835710/54098603-44620f80-43f0-11e9-814d-d78b5a323822.png" alt="image"></p>
+<h2 id="需求整理"><a href="#需求整理" class="headerlink" title="需求整理"></a>需求整理</h2><ul>
+<li><strong>H5需求</strong></li>
+</ul>
+<ol>
+<li>分享下载单页，需要设计图</li>
+</ol>
+<ul>
+<li><strong>PC需求</strong></li>
+</ul>
+<ol>
+<li>pc端添加表情，之前移动端做了表情，所以是有表情json数据的</li>
+<li>管理员功能扩展，之前ts+有，但是类型不足，需要新增可删除 问题、回答、资讯功能</li>
+</ol>
+<ul>
+<li><strong>服务端需求</strong></li>
+</ul>
+<ol>
+<li>管理员功能扩展，之前ts+有，但是类型不足，需要新增可删除 问题、回答、资讯功能</li>
+<li>问题、回答、资讯提供管理员删除接口</li>
+<li>优化建议 注册用户添加IP</li>
+</ol>
+<ul>
+<li><strong>后台管理</strong></li>
+</ul>
+<ol>
+<li>优化建议，<a href="http://test-plus.zhibocloud.cn/admin#/reports" target="_blank" rel="noopener">举报管理</a>-点击查看，处理为像评论管理处一样的方式，点击之后右侧弹出资源显示界面。</li>
+</ol>
+<ul>
+<li><strong>移动端需求</strong></li>
+</ul>
+<ol>
+<li>管理员功能扩展，新增可删除 问题、回答、资讯功能</li>
+<li>广告内部跳转</li>
+</ol>
+<h2 id="时间规划"><a href="#时间规划" class="headerlink" title="时间规划"></a>时间规划</h2><ol>
+<li>H5分享下载单页要先有设计图才能估计时间</li>
+<li>pc添加表情 0.5 天</li>
+<li>pc管理员删除 问题、回答、资讯 1 天</li>
+<li>服务器提供管理员删除 问题、回答、资讯接口以及注册用户添加IP 1 天</li>
+<li>后台管理关于举报管理的优化建议，至少 3-4 天。</li>
+<li>移动端管理员功能扩展，新增可删除 问题、回答、资讯功能 1 天</li>
+<li>移动端广告内部跳转 顺手就做了。</li>
+</ol>
+<h2 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h2><ol>
+<li>时间规划中第五点任务，感觉意义不大。举报内容格式多样，有动态有帖子有用户等等等，不像评论管理单是针对某一种资源。— 已沟通并收到回复，这个功能先不做。</li>
+<li>H5分享下载单页。 — 已沟通并收到回复，本周内出图，下周再做。</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/需求整理/" rel="tag"># 需求整理</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/12/关于消息通知与推送类型说明与参考/" rel="prev" title="关于消息通知与推送类型说明与参考">
+                关于消息通知与推送类型说明与参考 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">TangYuanMao</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ts-2-3-0-版本后续工作"><span class="nav-number">1.</span> <span class="nav-text">ts+ 2.3.0 版本后续工作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#甲方"><span class="nav-number">1.1.</span> <span class="nav-text">甲方</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#需求整理"><span class="nav-number">1.2.</span> <span class="nav-text">需求整理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#时间规划"><span class="nav-number">1.3.</span> <span class="nav-text">时间规划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#补充说明"><span class="nav-number">1.4.</span> <span class="nav-text">补充说明</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TangYuanMao</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
