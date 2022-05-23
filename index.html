@@ -1,23 +1,306 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>不二</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="不二">
+<meta property="og:url" content="https://icepring.github.io/index.html">
+<meta property="og:site_name" content="不二">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="TangYuanMao">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="不二" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
 
-{% block title %}{{ config.title }}{% if theme.index_with_subtitle and config.subtitle %} - {{config.subtitle }}{% endif %}{% endblock %}
+  
 
-{% block page_class %}
-  {% if is_home() %}page-home{% endif -%}
-{% endblock %}
+<meta name="generator" content="Hexo 6.2.0"></head>
 
-{% block content %}
-  <section id="posts" class="posts-expand">
-    {% for post in page.posts %}
-      {{ post_template.render(post, true) }}
-    {% endfor %}
-  </section>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">不二</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://icepring.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-关于消息通知与推送类型说明与参考" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/03/12/%E5%85%B3%E4%BA%8E%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5%E4%B8%8E%E6%8E%A8%E9%80%81%E7%B1%BB%E5%9E%8B%E8%AF%B4%E6%98%8E%E4%B8%8E%E5%8F%82%E8%80%83/" class="article-date">
+  <time datetime="2019-03-12T08:40:23.000Z" itemprop="datePublished">2019-03-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/12/%E5%85%B3%E4%BA%8E%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5%E4%B8%8E%E6%8E%A8%E9%80%81%E7%B1%BB%E5%9E%8B%E8%AF%B4%E6%98%8E%E4%B8%8E%E5%8F%82%E8%80%83/">关于消息通知与推送类型说明与参考</a>
+    </h1>
+  
 
-  {% include '_partials/pagination.swig' %}
-{% endblock %}
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="关于消息通知与推送类型说明与参考"><a href="#关于消息通知与推送类型说明与参考" class="headerlink" title="关于消息通知与推送类型说明与参考"></a>关于消息通知与推送类型说明与参考</h1><h2 id="已知系统消息类型"><a href="#已知系统消息类型" class="headerlink" title="已知系统消息类型"></a>已知系统消息类型</h2><ul>
+<li>跳转至相应资源详情</li>
+<li>加圈申请跳转至审核列表，并定到位加圈分类<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 打赏动态</span><br><span class="line"> */</span><br><span class="line">String REWARD_FEEDS = &quot;reward:feeds&quot;;</span><br><span class="line">/**</span><br><span class="line"> * 打赏资讯</span><br><span class="line"> */</span><br><span class="line">String REWARD_NEWS = &quot;reward:news&quot;;</span><br><span class="line">/**</span><br><span class="line"> * 打赏用户</span><br><span class="line"> */</span><br><span class="line">String REWARD_USER = &quot;reward&quot;;</span><br><span class="line">/**</span><br><span class="line"> * 用户认证（注意区分通过驳回）</span><br><span class="line"> */</span><br><span class="line">String USER_CERTIFICATION = &quot;user-certification&quot;;</span><br><span class="line">String CERTIFICATION_REJECTED = &quot;rejected&quot;;</span><br><span class="line">/**</span><br><span class="line"> * 加圈申请</span><br><span class="line"> */</span><br><span class="line">String GROUP_JOIN = &quot;group:join&quot;;</span><br><span class="line">/**</span><br><span class="line"> * 回答被采纳</span><br><span class="line"> */</span><br><span class="line">String QA_ANSWER_ADOPTION = &quot;qa:answer-adoption&quot;;</span><br><span class="line">String QA_ANSWER_ADOPTION_1 = &quot;question:answer&quot;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 回答被大赏</span><br><span class="line"> */</span><br><span class="line">String QA_ANSWER_REWARD = &quot;qa:reward&quot;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 动态评论置顶审核</span><br><span class="line"> */</span><br><span class="line">String PINNED_FEED_COMMENT = &quot;pinned:feed/comment&quot;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 资讯评论置顶审核</span><br><span class="line"> */</span><br><span class="line">String PINNED_NEWS_COMMENT = &quot;pinned:news/comment&quot;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 帖子评论置顶审核</span><br><span class="line"> */</span><br><span class="line">String GROUP_COMMENT_PINNED = &quot;group:comment-pinned&quot;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 帖子置顶审核</span><br><span class="line"> */</span><br><span class="line">String GROUP_POST_PINNED = &quot;group:post-pinned&quot;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">// 拼接文本参考</span><br><span class="line">switch (type) &#123;</span><br><span class="line">	case INotificationRepository.REWARD_FEEDS:</span><br><span class="line">		content = sender.name + &quot;打赏了你的动态&quot;;</span><br><span class="line">		break;</span><br><span class="line">	case INotificationRepository.REWARD_NEWS:</span><br><span class="line">		content = &quot;你的资讯《&quot; + news.name + &quot;》被&quot; + sender.name + &quot;打赏了&quot; + amount + unit;</span><br><span class="line">		break;</span><br><span class="line">	case INotificationRepository.REWARD_USER:</span><br><span class="line">		content = sender.name + &quot;打赏了你&quot;;</span><br><span class="line">		break;</span><br><span class="line">	case INotificationRepository.PINNED_FEED_COMMENT:</span><br><span class="line">		if (INotificationRepository.CERTIFICATION_REJECTED.equals(state))&#123;</span><br><span class="line">			content = &quot;拒绝用户动态评论「&quot; + comment.name + &quot;」的置顶请求&quot;;</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			content = &quot;同意用户动态评论「&quot; + comment.name + &quot;」的置顶请求&quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		break;</span><br><span class="line">	case INotificationRepository.PINNED_NEWS_COMMENT:</span><br><span class="line">		if (INotificationRepository.CERTIFICATION_REJECTED.equals(state))&#123;</span><br><span class="line">			content = &quot;拒绝用户关于资讯《&quot; + news.name + &quot;》评论「&quot; + comment.name + &quot;」的置顶请求&quot;;</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			content = &quot;同意用户关于资讯《&quot; + news.name + &quot;》评论「&quot; + comment.name + &quot;」的置顶请求&quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		break;</span><br><span class="line">	case INotificationRepository.GROUP_COMMENT_PINNED:</span><br><span class="line">		if (INotificationRepository.CERTIFICATION_REJECTED.equals(state))&#123;</span><br><span class="line">			content = &quot;拒绝用户的评论置顶请求&quot;;</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			content = &quot;同意用户的评论置顶请求&quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		break;</span><br><span class="line">	case INotificationRepository.GROUP_POST_PINNED:</span><br><span class="line">		if (INotificationRepository.CERTIFICATION_REJECTED.equals(state))&#123;</span><br><span class="line">			content = &quot;拒绝用户帖子「&quot; + post.name + &quot;」的置顶请求&quot;;</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			content = &quot;同意用户帖子「&quot; + post.name + &quot;」的置顶请求&quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		break;</span><br><span class="line">	case INotificationRepository.QA_ANSWER_REWARD:</span><br><span class="line">		content = answer.getUserInfoBean().getName() + &quot;打赏了你的回答&quot;;</span><br><span class="line">		break;</span><br><span class="line">	case INotificationRepository.GROUP_JOIN:</span><br><span class="line">		if (INotificationRepository.CERTIFICATION_REJECTED.equals(state))&#123;</span><br><span class="line">			content = &quot;拒绝用户加入「&quot; + group.name + &quot;」圈子&quot;;</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			content = user.name + &quot;请求加入「&quot; + group.name + &quot;」圈子&quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		break;</span><br><span class="line">	case INotificationRepository.QA_ANSWER_ADOPTION:</span><br><span class="line">	case INotificationRepository.QA_ANSWER_ADOPTION_1:</span><br><span class="line">		content = &quot;你提交的问题回答被采纳&quot;;</span><br><span class="line">		break;</span><br><span class="line">	case INotificationRepository.USER_CERTIFICATION:</span><br><span class="line">		if (INotificationRepository.CERTIFICATION_REJECTED.equals(state)) &#123;</span><br><span class="line">			content = &quot;你申请的身份认证已被驳回，驳回理由：&quot; + content;</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			content = &quot;你申请的身份认证已通过&quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		break;</span><br><span class="line">	default:</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="AT消息类型"><a href="#AT消息类型" class="headerlink" title="AT消息类型"></a>AT消息类型</h2></li>
+<li>AT消息只有两个类型，动态中的AT,评论中的AT,但是评论有多种评论</li>
+<li>跳转至相应资源详情<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 这是需要的上级资源类型</span><br><span class="line">String TYPE_INFO = &quot;news&quot;; // 资讯</span><br><span class="line">String TYPE_POST = &quot;group-posts&quot;; // 帖子</span><br><span class="line">String TYPE_DYNAMIC = &quot;feeds&quot;;// 动态</span><br><span class="line">String TYPE_QUESTION = &quot;questions&quot;;// 问题</span><br><span class="line">String TYPE_ANSWERS = &quot;question-answers&quot;;// 回答</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="收到的评论消息类型"><a href="#收到的评论消息类型" class="headerlink" title="收到的评论消息类型"></a>收到的评论消息类型</h2><ul>
+<li>跳转至相应资源评论界面<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 这是需要的上级资源类型</span><br><span class="line">String FEED = &quot;feeds&quot;;</span><br><span class="line">String INFO = &quot;news&quot;;</span><br><span class="line">String POST = &quot;group-posts&quot;;</span><br><span class="line">String QUESTION = &quot;questions&quot;;</span><br><span class="line">String ANSWER = &quot;question-answers&quot;;</span><br><span class="line">String MUSIC = &quot;musics&quot;; // 音乐单曲</span><br><span class="line">String MUSIC_SPECIALS = &quot;music_specials&quot;; // 音乐专辑</span><br></pre></td></tr></table></figure>
+<h2 id="收到的赞消息类型"><a href="#收到的赞消息类型" class="headerlink" title="收到的赞消息类型"></a>收到的赞消息类型</h2></li>
+<li>跳转至相应资源详情<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 这是需要的上级资源类型</span><br><span class="line">String TYPE_INFO = &quot;news&quot;; // 资讯</span><br><span class="line">String TYPE_POST = &quot;group-posts&quot;; // 帖子</span><br><span class="line">String TYPE_DYNAMIC = &quot;feeds&quot;;// 动态</span><br><span class="line">String TYPE_QUESTION = &quot;questions&quot;;// 问题</span><br><span class="line">String TYPE_ANSWERS = &quot;question-answers&quot;;// 回答</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="已知推送消息类型"><a href="#已知推送消息类型" class="headerlink" title="已知推送消息类型"></a>已知推送消息类型</h2><ul>
+<li>跳转至相应通知列表界面<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String JPUSH_MESSAGE_TYPE_SYSTEM = &quot;notification:system&quot;; //  系统通知模块</span><br><span class="line">String JPUSH_MESSAGE_TYPE_LIKE = &quot;notification:likes&quot;; //  点赞通知模块</span><br><span class="line">String JPUSH_MESSAGE_TYPE_COMMENT = &quot;notification:comments&quot;; //  评论通知模块</span><br><span class="line">String JPUSH_MESSAGE_TYPE_AT = &quot;notification:at&quot;; //  at通知模块</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><h3 id="系统消息类型补充"><a href="#系统消息类型补充" class="headerlink" title="系统消息类型补充"></a>系统消息类型补充</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 帖子评论置顶审核</span><br><span class="line"> */</span><br><span class="line">String GROUP_SEND_COMMENT_PINNED = &quot;group:send-comment-pinned&quot;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 问题邀请回答</span><br><span class="line"> */</span><br><span class="line">String QA_INVITATION = &quot;qa:invitation&quot;;</span><br><span class="line">// 拼接内容如下</span><br><span class="line">content = sender.name + &quot;邀请你回答问题「&quot; + question.name + &quot;」&quot;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 打赏帖子</span><br><span class="line"> */</span><br><span class="line">String GROUP_POST_REWARD = &quot;group:post-reward&quot;;</span><br><span class="line">// 拼接内容如下</span><br><span class="line">content = sender.name + &quot;打赏了你的帖子「&quot; + post.name + &quot;」&quot;;</span><br></pre></td></tr></table></figure>
 
-{% block sidebar %}
-  {{ sidebar_template.render(false) }}
-{% endblock %}
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://icepring.github.io/2019/03/12/%E5%85%B3%E4%BA%8E%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5%E4%B8%8E%E6%8E%A8%E9%80%81%E7%B1%BB%E5%9E%8B%E8%AF%B4%E6%98%8E%E4%B8%8E%E5%8F%82%E8%80%83/" data-id="cl3iv82gc000300m75wjo58w7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9C%80%E6%B1%82%E6%95%B4%E7%90%86/" rel="tag">需求整理</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ts+ 2.3.0 版本后续工作" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/03/12/ts+%202.3.0%20%E7%89%88%E6%9C%AC%E5%90%8E%E7%BB%AD%E5%B7%A5%E4%BD%9C/" class="article-date">
+  <time datetime="2019-03-12T02:56:33.000Z" itemprop="datePublished">2019-03-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/12/ts+%202.3.0%20%E7%89%88%E6%9C%AC%E5%90%8E%E7%BB%AD%E5%B7%A5%E4%BD%9C/">ts+ 2.3.0 版本后续工作</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="ts-2-3-0-版本后续工作"><a href="#ts-2-3-0-版本后续工作" class="headerlink" title="ts+ 2.3.0 版本后续工作"></a>ts+ 2.3.0 版本后续工作</h1><h2 id="甲方"><a href="#甲方" class="headerlink" title="甲方"></a>甲方</h2><p><img src="https://user-images.githubusercontent.com/11835710/54098603-44620f80-43f0-11e9-814d-d78b5a323822.png" alt="image"></p>
+<h2 id="需求整理"><a href="#需求整理" class="headerlink" title="需求整理"></a>需求整理</h2><ul>
+<li><strong>H5需求</strong></li>
+</ul>
+<ol>
+<li>分享下载单页，需要设计图</li>
+</ol>
+<ul>
+<li><strong>PC需求</strong></li>
+</ul>
+<ol>
+<li>pc端添加表情，之前移动端做了表情，所以是有表情json数据的</li>
+<li>管理员功能扩展，之前ts+有，但是类型不足，需要新增可删除 问题、回答、资讯功能</li>
+</ol>
+<ul>
+<li><strong>服务端需求</strong></li>
+</ul>
+<ol>
+<li>管理员功能扩展，之前ts+有，但是类型不足，需要新增可删除 问题、回答、资讯功能</li>
+<li>问题、回答、资讯提供管理员删除接口</li>
+<li>优化建议 注册用户添加IP</li>
+</ol>
+<ul>
+<li><strong>后台管理</strong></li>
+</ul>
+<ol>
+<li>优化建议，<a target="_blank" rel="noopener" href="http://test-plus.zhibocloud.cn/admin#/reports">举报管理</a>-点击查看，处理为像评论管理处一样的方式，点击之后右侧弹出资源显示界面。</li>
+</ol>
+<ul>
+<li><strong>移动端需求</strong></li>
+</ul>
+<ol>
+<li>管理员功能扩展，新增可删除 问题、回答、资讯功能</li>
+<li>广告内部跳转</li>
+</ol>
+<h2 id="时间规划"><a href="#时间规划" class="headerlink" title="时间规划"></a>时间规划</h2><ol>
+<li>H5分享下载单页要先有设计图才能估计时间</li>
+<li>pc添加表情 0.5 天</li>
+<li>pc管理员删除 问题、回答、资讯 1 天</li>
+<li>服务器提供管理员删除 问题、回答、资讯接口以及注册用户添加IP 1 天</li>
+<li>后台管理关于举报管理的优化建议，至少 3-4 天。</li>
+<li>移动端管理员功能扩展，新增可删除 问题、回答、资讯功能 1 天</li>
+<li>移动端广告内部跳转 顺手就做了。</li>
+</ol>
+<h2 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h2><ol>
+<li>时间规划中第五点任务，感觉意义不大。举报内容格式多样，有动态有帖子有用户等等等，不像评论管理单是针对某一种资源。— 已沟通并收到回复，这个功能先不做。</li>
+<li>H5分享下载单页。 — 已沟通并收到回复，本周内出图，下周再做。</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://icepring.github.io/2019/03/12/ts+%202.3.0%20%E7%89%88%E6%9C%AC%E5%90%8E%E7%BB%AD%E5%B7%A5%E4%BD%9C/" data-id="cl3iv82g6000000m74jlz0dio" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9C%80%E6%B1%82%E6%95%B4%E7%90%86/" rel="tag">需求整理</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9C%80%E6%B1%82%E6%95%B4%E7%90%86/" rel="tag">需求整理</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E9%9C%80%E6%B1%82%E6%95%B4%E7%90%86/" style="font-size: 10px;">需求整理</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/03/12/%E5%85%B3%E4%BA%8E%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5%E4%B8%8E%E6%8E%A8%E9%80%81%E7%B1%BB%E5%9E%8B%E8%AF%B4%E6%98%8E%E4%B8%8E%E5%8F%82%E8%80%83/">关于消息通知与推送类型说明与参考</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/12/ts+%202.3.0%20%E7%89%88%E6%9C%AC%E5%90%8E%E7%BB%AD%E5%B7%A5%E4%BD%9C/">ts+ 2.3.0 版本后续工作</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 TangYuanMao<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  </div>
+</body>
+</html>

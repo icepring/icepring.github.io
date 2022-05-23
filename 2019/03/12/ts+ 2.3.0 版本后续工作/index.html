@@ -1,37 +1,266 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>ts+ 2.3.0 版本后续工作 | 不二</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="ts+ 2.3.0 版本后续工作甲方 需求整理 H5需求   分享下载单页，需要设计图   PC需求   pc端添加表情，之前移动端做了表情，所以是有表情json数据的 管理员功能扩展，之前ts+有，但是类型不足，需要新增可删除 问题、回答、资讯功能   服务端需求   管理员功能扩展，之前ts+有，但是类型不足，需要新增可删除 问题、回答、资讯功能 问题、回答、资讯提供管理员删除接口 优化建议">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ts+ 2.3.0 版本后续工作">
+<meta property="og:url" content="https://icepring.github.io/2019/03/12/ts+%202.3.0%20%E7%89%88%E6%9C%AC%E5%90%8E%E7%BB%AD%E5%B7%A5%E4%BD%9C/index.html">
+<meta property="og:site_name" content="不二">
+<meta property="og:description" content="ts+ 2.3.0 版本后续工作甲方 需求整理 H5需求   分享下载单页，需要设计图   PC需求   pc端添加表情，之前移动端做了表情，所以是有表情json数据的 管理员功能扩展，之前ts+有，但是类型不足，需要新增可删除 问题、回答、资讯功能   服务端需求   管理员功能扩展，之前ts+有，但是类型不足，需要新增可删除 问题、回答、资讯功能 问题、回答、资讯提供管理员删除接口 优化建议">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://user-images.githubusercontent.com/11835710/54098603-44620f80-43f0-11e9-814d-d78b5a323822.png">
+<meta property="article:published_time" content="2019-03-12T02:56:33.000Z">
+<meta property="article:modified_time" content="2022-05-23T14:57:45.035Z">
+<meta property="article:author" content="TangYuanMao">
+<meta property="article:tag" content="需求整理">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/11835710/54098603-44620f80-43f0-11e9-814d-d78b5a323822.png">
+  
+    <link rel="alternate" href="/atom.xml" title="不二" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
 
+  
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
+<meta name="generator" content="Hexo 6.2.0"></head>
 
-{% block page_class %}page-post-detail{% endblock %}
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">不二</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://icepring.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-ts+ 2.3.0 版本后续工作" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/03/12/ts+%202.3.0%20%E7%89%88%E6%9C%AC%E5%90%8E%E7%BB%AD%E5%B7%A5%E4%BD%9C/" class="article-date">
+  <time datetime="2019-03-12T02:56:33.000Z" itemprop="datePublished">2019-03-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ts+ 2.3.0 版本后续工作
+    </h1>
+  
 
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="ts-2-3-0-版本后续工作"><a href="#ts-2-3-0-版本后续工作" class="headerlink" title="ts+ 2.3.0 版本后续工作"></a>ts+ 2.3.0 版本后续工作</h1><h2 id="甲方"><a href="#甲方" class="headerlink" title="甲方"></a>甲方</h2><p><img src="https://user-images.githubusercontent.com/11835710/54098603-44620f80-43f0-11e9-814d-d78b5a323822.png" alt="image"></p>
+<h2 id="需求整理"><a href="#需求整理" class="headerlink" title="需求整理"></a>需求整理</h2><ul>
+<li><strong>H5需求</strong></li>
+</ul>
+<ol>
+<li>分享下载单页，需要设计图</li>
+</ol>
+<ul>
+<li><strong>PC需求</strong></li>
+</ul>
+<ol>
+<li>pc端添加表情，之前移动端做了表情，所以是有表情json数据的</li>
+<li>管理员功能扩展，之前ts+有，但是类型不足，需要新增可删除 问题、回答、资讯功能</li>
+</ol>
+<ul>
+<li><strong>服务端需求</strong></li>
+</ul>
+<ol>
+<li>管理员功能扩展，之前ts+有，但是类型不足，需要新增可删除 问题、回答、资讯功能</li>
+<li>问题、回答、资讯提供管理员删除接口</li>
+<li>优化建议 注册用户添加IP</li>
+</ol>
+<ul>
+<li><strong>后台管理</strong></li>
+</ul>
+<ol>
+<li>优化建议，<a target="_blank" rel="noopener" href="http://test-plus.zhibocloud.cn/admin#/reports">举报管理</a>-点击查看，处理为像评论管理处一样的方式，点击之后右侧弹出资源显示界面。</li>
+</ol>
+<ul>
+<li><strong>移动端需求</strong></li>
+</ul>
+<ol>
+<li>管理员功能扩展，新增可删除 问题、回答、资讯功能</li>
+<li>广告内部跳转</li>
+</ol>
+<h2 id="时间规划"><a href="#时间规划" class="headerlink" title="时间规划"></a>时间规划</h2><ol>
+<li>H5分享下载单页要先有设计图才能估计时间</li>
+<li>pc添加表情 0.5 天</li>
+<li>pc管理员删除 问题、回答、资讯 1 天</li>
+<li>服务器提供管理员删除 问题、回答、资讯接口以及注册用户添加IP 1 天</li>
+<li>后台管理关于举报管理的优化建议，至少 3-4 天。</li>
+<li>移动端管理员功能扩展，新增可删除 问题、回答、资讯功能 1 天</li>
+<li>移动端广告内部跳转 顺手就做了。</li>
+</ol>
+<h2 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h2><ol>
+<li>时间规划中第五点任务，感觉意义不大。举报内容格式多样，有动态有帖子有用户等等等，不像评论管理单是针对某一种资源。— 已沟通并收到回复，这个功能先不做。</li>
+<li>H5分享下载单页。 — 已沟通并收到回复，本周内出图，下周再做。</li>
+</ol>
 
-{% block content %}
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://icepring.github.io/2019/03/12/ts+%202.3.0%20%E7%89%88%E6%9C%AC%E5%90%8E%E7%BB%AD%E5%B7%A5%E4%BD%9C/" data-id="cl3iv82g6000000m74jlz0dio" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9C%80%E6%B1%82%E6%95%B4%E7%90%86/" rel="tag">需求整理</a></li></ul>
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/03/12/%E5%85%B3%E4%BA%8E%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5%E4%B8%8E%E6%8E%A8%E9%80%81%E7%B1%BB%E5%9E%8B%E8%AF%B4%E6%98%8E%E4%B8%8E%E5%8F%82%E8%80%83/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          关于消息通知与推送类型说明与参考
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
-    <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9C%80%E6%B1%82%E6%95%B4%E7%90%86/" rel="tag">需求整理</a></li></ul>
     </div>
   </div>
 
-{% endblock %}
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E9%9C%80%E6%B1%82%E6%95%B4%E7%90%86/" style="font-size: 10px;">需求整理</a>
+    </div>
+  </div>
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/03/12/%E5%85%B3%E4%BA%8E%E6%B6%88%E6%81%AF%E9%80%9A%E7%9F%A5%E4%B8%8E%E6%8E%A8%E9%80%81%E7%B1%BB%E5%9E%8B%E8%AF%B4%E6%98%8E%E4%B8%8E%E5%8F%82%E8%80%83/">关于消息通知与推送类型说明与参考</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/12/ts+%202.3.0%20%E7%89%88%E6%9C%AC%E5%90%8E%E7%BB%AD%E5%B7%A5%E4%BD%9C/">ts+ 2.3.0 版本后续工作</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 TangYuanMao<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  </div>
+</body>
+</html>
