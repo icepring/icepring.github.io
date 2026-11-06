@@ -1,1 +1,1 @@
-[{"relation":["delegate_permission/common.handle_all_urls"],"target":{"namespace":"android_app","package_name":"com.example.flutter_demo","sha256_cert_fingerprints":["53:50:0C:DC:85:AE:70:79:80:E2:DB:0B:A8:5B:1F:42:FE:CB:A9:7B:DE:AE:69:05:D3:2E:52:93:DE:AF:2E:1F"]}}]
+[{"relation":["delegate_permission/common.handle_all_urls"],"target":{"namespace":"android_app","package_name":"jp.co.rakutensec.shisankeisei","sha256_cert_fingerprints":["A2:96:BF:50:22:93:91:8C:D9:8D:90:B6:59:9A:65:B9:ED:8A:36:0B:CF:F2:95:3F:92:E5:93:29:F5:B6:2B:3A"]}}]

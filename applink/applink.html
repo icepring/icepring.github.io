@@ -36,7 +36,18 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
 
 <meta name="generator" content="Hexo 8.1.2"></head>
-
+<script>
+	
+	
+	window.setTimeout(function(){
+	var storeLink = document.getElementById("store-link");
+	var playStoreUrl = new URL(storeLink.href);
+	var param = window.location.search;
+	playStoreUrl.searchParams.set("referrer",param.substring(1));
+	storeLink.href = playStoreUrl.toString();
+		window.location.replace(storeLink.href);
+	},300);
+</script>
 <body>
   <div id="container">
     <div id="wrap">
@@ -100,8 +111,8 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <h1 id="Android-App-Links-Test-2"><a href="#Android-App-Links-Test-2" class="headerlink" title="Android App Links Test   2"></a>Android App Links Test   2</h1><p>This page is used to test Android App Links.</p>
-<a href="https://icepring.github.io/applink?id=123">
-  Open Flutter App
+<a id="store-link" href="https://play.google.com/store/apps/details?id=jp.co.rakutensec.shisankeisei">
+  iGrow - 楽天証券の資産づくりアプリ
 </a>
 
       
